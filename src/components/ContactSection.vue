@@ -9,16 +9,7 @@
             <span class="text">TikTok</span>
             <span class="username">@jhordi293733</span>
           </a>
-          <a href="https://wa.me/6281359929443" target="_blank" class="social-btn whatsapp">
-            <span class="icon">💬</span>
-            <span class="text">WhatsApp</span>
-            <span class="username">+62 813-5992-9443</span>
-          </a>
-          <a href="https://www.instagram.com/ramaadhan.a/" target="_blank" class="social-btn instagram">
-            <span class="icon">📸</span>
-            <span class="text">Instagram</span>
-            <span class="username">@ramaadhan.a</span>
-          </a>
+
         </div>
       </div>
       <footer class="footer">
@@ -91,20 +82,10 @@
 
 .tiktok:hover .text {
   background: linear-gradient(45deg, #00f2ea, #ff0050);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-.whatsapp:hover .text {
-  color: #25D366;
-}
-
-.instagram:hover .text {
-  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
 .footer {
   text-align: center;
   color: var(--text-secondary);
