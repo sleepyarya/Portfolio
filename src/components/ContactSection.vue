@@ -9,6 +9,11 @@
             <span class="text">TikTok</span>
             <span class="username">@jhordi293733</span>
           </a>
+          <a href="https://discord.gg/UY7jXz49Sz" target="_blank" class="social-btn discord">
+            <span class="icon">👾</span>
+            <span class="text">Discord</span>
+            <span class="username">Join Server</span>
+          </a>
 
         </div>
       </div>
@@ -85,6 +90,10 @@
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.discord:hover .text {
+  color: #5865F2;
 }
 .footer {
   text-align: center;
