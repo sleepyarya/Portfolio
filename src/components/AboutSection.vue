@@ -1,4 +1,5 @@
 <script setup>
+import { projects } from '../data/projects';
 </script>
 
 <template>
@@ -21,7 +22,7 @@
               <span class="label">Years Exp</span>
             </div>
             <div class="stat-item">
-              <span class="number">4</span>
+              <span class="number">{{ projects.length }}</span>
               <span class="label">Projects</span>
             </div>
           </div>
