@@ -47,6 +47,7 @@
   line-height: 1.1;
   background: linear-gradient(135deg, #fff 0%, #a5a5a5 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   opacity: 0;
   animation: fadeUp 0.8s ease forwards 0.4s;
