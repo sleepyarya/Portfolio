@@ -3,6 +3,7 @@ import myWebKosImg from '../assets/my-web-kos.png';
 import labSeImg from '../assets/lab-se.png';
 import utilityImg from '../assets/utility-web-app.png';
 import staticCatalogImg from '../assets/static-catalog.png';
+import portfolioNextJsImg from '../assets/portfolio-nextjs.png';
 
 const projects = [
   {
@@ -26,7 +27,7 @@ const projects = [
     title: 'Utility Web App',
     description: 'A versatile collection of web-based utility tools for everyday tasks.',
     tags: ['JavaScript', 'HTML', 'CSS'],
-    link: 'https://github.com/sleepyarya/UtilityWebApp',
+    link: 'https://utility-web-app-eta.vercel.app/',
     image: utilityImg
   },
   {
@@ -34,8 +35,16 @@ const projects = [
     title: 'Static Catalog',
     description: 'A responsive and static web-based catalog system to showcase products or items.',
     tags: ['CSS', 'JavaScript', 'HTML'],
-    link: 'https://github.com/sleepyarya/StaticCatalog',
+    link: 'https://static-catalog.vercel.app/',
     image: staticCatalogImg
+  },
+  {
+    id: 5,
+    title: 'Portfolio With Next.js',
+    description: 'A modern, high-performance portfolio website built with Next.js and styled for a premium user experience.',
+    tags: ['Next.js', 'React', 'CSS'],
+    link: 'https://portfolio-next-js-six-omega.vercel.app/',
+    image: portfolioNextJsImg
   }
 ];
 </script>
@@ -55,7 +64,9 @@ const projects = [
             <div class="tags">
               <span v-for="tag in project.tags" :key="tag">{{ tag }}</span>
             </div>
-            <a :href="project.link" class="card-link">View Project →</a>
+            <a :href="project.link" target="_blank" rel="noopener noreferrer" class="card-link">
+              View Project {{ project.link.includes('github.com') ? '(Github)' : '(Domain)' }} →
+            </a>
           </div>
         </div>
       </div>
