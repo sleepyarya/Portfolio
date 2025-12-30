@@ -50,7 +50,10 @@ onMounted(() => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         entry.target.classList.add('active');
-        observer.unobserve(entry.target); // Animate only once
+      } else {
+         // Optional: Remove class to replay animation when scrolling back up
+         // If you find it too distracting, you can comment this out lines below
+        entry.target.classList.remove('active');
       }
     });
   }, observerOptions);

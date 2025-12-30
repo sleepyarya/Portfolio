@@ -1,8 +1,8 @@
 <template>
   <section id="contact" class="contact-section">
     <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <div class="contact-wrapper glass-panel">
+      <h2 class="section-title scroll-reveal">Get In Touch</h2>
+      <div class="contact-wrapper glass-panel scroll-reveal stagger-1">
         <div class="social-links">
           <a href="https://www.tiktok.com/@jhordi293733" target="_blank" class="social-btn tiktok">
             <span class="icon">🎵</span>
