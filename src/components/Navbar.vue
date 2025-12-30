@@ -190,4 +190,37 @@ const scrollTo = (id) => {
     color: var(--text-primary);
   }
 }
+
+/* Doodle Animation for Logo */
+@keyframes doodle-wiggle {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-2px, 0px) rotate(1deg); }
+  30% { transform: translate(2px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-2px, 1px) rotate(0deg); }
+  70% { transform: translate(2px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.logo {
+  display: inline-block;
+  animation: doodle-wiggle 2s infinite; /* Slowed down for a gentle doodle vibe, or 0.3s for rapid boils */
+  position: relative;
+}
+
+.logo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 3px;
+  background: var(--text-primary);
+  border-radius: 50% 50% 50% 50% / 10% 10% 50% 10%; /* Rough underline */
+  transform: rotate(-2deg);
+}
 </style>

@@ -1,5 +1,4 @@
-import myWebKosImg from '../assets/my-web-kos.png';
-import labSeImg from '../assets/lab-se.png';
+import socialMediaDashboardImg from '../assets/social-media-dashboard.png';
 import utilityImg from '../assets/utility-web-app.png';
 import staticCatalogImg from '../assets/static-catalog.png';
 import portfolioNextJsImg from '../assets/portfolio-nextjs.png';
@@ -7,22 +6,14 @@ import portfolioNextJsImg from '../assets/portfolio-nextjs.png';
 export const projects = [
     {
         id: 1,
-        title: 'MyWebKos',
-        description: 'A comprehensive web-based management system for boarding houses (Kos).',
-        tags: ['PHP', 'CSS'],
-        link: 'https://github.com/sleepyarya/MyWebKos',
-        image: myWebKosImg
+        title: 'Social Media Dashboard',
+        description: 'A modern, aesthetic social media dashboard featuring dark mode and real-time analytics overview.',
+        tags: ['Vue.js', 'CSS', 'Responsive'],
+        link: 'https://github.com/sleepyarya/SocialMediaDashboard',
+        image: socialMediaDashboardImg
     },
     {
         id: 2,
-        title: 'Lab Software Engineering',
-        description: 'Official website for Software Engineering Lab built with PHP Native and PostgreSQL, featuring multi-role capabilities.',
-        tags: ['PHP', 'PostgreSQL', 'Bootstrap 5'],
-        link: 'https://github.com/sleepyarya/labse_web',
-        image: labSeImg
-    },
-    {
-        id: 3,
         title: 'Utility Web App',
         description: 'A versatile collection of web-based utility tools for everyday tasks.',
         tags: ['JavaScript', 'HTML', 'CSS'],
@@ -30,7 +21,7 @@ export const projects = [
         image: utilityImg
     },
     {
-        id: 4,
+        id: 3,
         title: 'Static Catalog',
         description: 'A responsive and static web-based catalog system to showcase products or items.',
         tags: ['CSS', 'JavaScript', 'HTML'],
@@ -38,7 +29,7 @@ export const projects = [
         image: staticCatalogImg
     },
     {
-        id: 5,
+        id: 4,
         title: 'Portfolio With Next.js',
         description: 'A modern, high-performance portfolio website built with Next.js and styled for a premium user experience.',
         tags: ['Next.js', 'React', 'CSS'],
