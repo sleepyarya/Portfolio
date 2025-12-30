@@ -5,13 +5,13 @@ import { projects } from '../data/projects';
 <template>
   <section id="about" class="about-section">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
+      <h2 class="section-title scroll-reveal">About Me</h2>
       <div class="content-wrapper">
-        <div class="image-wrapper glass-panel">
+        <div class="image-wrapper glass-panel scroll-reveal stagger-1">
           <img src="../assets/profil.png" alt="Profile" />
           <div class="overlay"></div>
         </div>
-        <div class="text-wrapper glass-panel">
+        <div class="text-wrapper glass-panel scroll-reveal stagger-2">
           <h3>Who I Am</h3>
           <p>
             A dedicated Frontend Web Developer passionate about crafting pixel-perfect, responsive interfaces. With a strong command of modern web technologies including Vue.js and Next.js, I focus on building immersive web experiences that merge aesthetics with functionality. Always exploring new trends to bring creative ideas to life.

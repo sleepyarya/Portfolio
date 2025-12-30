@@ -10,27 +10,65 @@ const cursorX = ref(0)
 const cursorY = ref(0)
 const isHovering = ref(false)
 
+let rafId = null
+
 const moveCursor = (e) => {
-  cursorX.value = e.clientX
-  cursorY.value = e.clientY
+  if (rafId) return
   
-  // Check hover state
-  const target = e.target
-  if (
-    target.tagName.toLowerCase() === 'a' || 
-    target.tagName.toLowerCase() === 'button' ||
-    target.closest('a') ||
-    target.closest('button') ||
-    target.classList.contains('clickable')
-  ) {
-    isHovering.value = true
-  } else {
-    isHovering.value = false
-  }
+  rafId = requestAnimationFrame(() => {
+    cursorX.value = e.clientX
+    cursorY.value = e.clientY
+    
+    // Check hover state
+    const target = e.target
+    if (
+      target.tagName.toLowerCase() === 'a' || 
+      target.tagName.toLowerCase() === 'button' ||
+      target.closest('a') ||
+      target.closest('button') ||
+      target.classList.contains('clickable')
+    ) {
+      isHovering.value = true
+    } else {
+      isHovering.value = false
+    }
+    
+    rafId = null
+  })
 }
 
 onMounted(() => {
   window.addEventListener('mousemove', moveCursor)
+
+  // Scroll Reveal Observer
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: "0px 0px -50px 0px"
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('active');
+        observer.unobserve(entry.target); // Animate only once
+      }
+    });
+  }, observerOptions);
+
+  // Observe all elements with .scroll-reveal class
+  // Use a longer delay to ensure Vue has fully rendered the v-for lists
+  const startObserving = (retryCount = 0) => {
+    const hiddenElements = document.querySelectorAll('.scroll-reveal');
+    
+    if (hiddenElements.length === 0 && retryCount < 3) {
+      setTimeout(() => startObserving(retryCount + 1), 300);
+      return;
+    }
+    
+    hiddenElements.forEach((el) => observer.observe(el));
+  };
+  
+  setTimeout(() => startObserving(), 400);
 })
 
 onUnmounted(() => {

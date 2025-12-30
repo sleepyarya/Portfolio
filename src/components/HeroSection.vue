@@ -2,7 +2,7 @@
   <section id="home" class="hero-section">
     <div class="hero-content">
       <h2 class="greeting">Hello, I'm</h2>
-      <h1 class="name">Creative Developer</h1>
+      <h1 class="name">Frontend Developer</h1>
       <p class="subtitle">Building digital experiences that matter.</p>
       <div class="cta-group">
         <a href="#projects" class="btn-primary">View Work</a>

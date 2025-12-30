@@ -5,11 +5,23 @@ import { projects } from '../data/projects';
 <template>
   <section id="projects" class="projects-section">
     <div class="container">
-      <h2 class="section-title">Featured Projects</h2>
+      <h2 class="section-title scroll-reveal">Featured Projects</h2>
       <div class="projects-grid">
-        <div v-for="project in projects" :key="project.id" class="project-card glass-panel">
+        <div 
+          v-for="(project, index) in projects" 
+          :key="project.id" 
+          class="project-card glass-panel scroll-reveal"
+          :class="'stagger-' + ((index % 3) + 1)"
+        >
           <div class="card-image">
-            <img :src="project.image" :alt="project.title" />
+            <div v-if="project.images && project.images.length > 0" class="image-slider">
+              <div class="slider-track">
+                <img v-for="(img, index) in project.images" :key="index" :src="img" :alt="project.title" />
+                <!-- Clone of the first image for seamless looping -->
+                <img :src="project.images[0]" :alt="project.title" />
+              </div>
+            </div>
+            <img v-else :src="project.image" :alt="project.title" />
           </div>
           <div class="card-content">
             <h3>{{ project.title }}</h3>
@@ -18,7 +30,7 @@ import { projects } from '../data/projects';
               <span v-for="tag in project.tags" :key="tag">{{ tag }}</span>
             </div>
             <a :href="project.link" target="_blank" rel="noopener noreferrer" class="card-link">
-              View Project {{ project.link.includes('github.com') ? '(Github)' : '(Domain)' }} →
+              View Project {{ project.link.includes('github') ? '(GitHub)' : '(Live Demo)' }} →
             </a>
           </div>
         </div>
@@ -150,5 +162,34 @@ import { projects } from '../data/projects';
 
 .card-link:hover {
   color: var(--accent-color);
+}
+
+/* Image Slider Styling */
+.image-slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.slider-track {
+  display: flex;
+  height: 100%;
+  animation: slideScroll 8s infinite cubic-bezier(0.65, 0, 0.35, 1);
+  will-change: transform; /* Optimize performance */
+}
+
+.slider-track img {
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes slideScroll {
+  0%, 45% { transform: translateX(0); }
+  50%, 95% { transform: translateX(-100%); }
+  100% { transform: translateX(-200%); }
 }
 </style>
