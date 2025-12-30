@@ -14,7 +14,7 @@ import { projects } from '../data/projects';
         <div class="text-wrapper glass-panel">
           <h3>Who I Am</h3>
           <p>
-            A passionate Web Developer dedicated to building responsive and user-friendly web applications. Possessing a strong foundation in HTML, CSS, and JavaScript, with a continuous drive to learn the latest technologies to deliver effective digital solutions.
+            A dedicated Frontend Web Developer passionate about crafting pixel-perfect, responsive interfaces. With a strong command of modern web technologies including Vue.js and Next.js, I focus on building immersive web experiences that merge aesthetics with functionality. Always exploring new trends to bring creative ideas to life.
           </p>
           <div class="stats">
             <div class="stat-item">
