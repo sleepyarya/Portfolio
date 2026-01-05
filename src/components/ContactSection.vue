@@ -7,7 +7,7 @@
           <a href="https://www.tiktok.com/@jhordi3321" target="_blank" class="social-btn tiktok">
             <span class="icon">🎵</span>
             <span class="text">TikTok</span>
-            <span class="username">@jhordi293733</span>
+            <span class="username">@jhordi3321</span>
           </a>
           <a href="https://discord.gg/UY7jXz49Sz" target="_blank" class="social-btn discord">
             <span class="icon">👾</span>
