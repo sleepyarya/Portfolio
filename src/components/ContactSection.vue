@@ -4,7 +4,7 @@
       <h2 class="section-title scroll-reveal">Get In Touch</h2>
       <div class="contact-wrapper glass-panel scroll-reveal stagger-1">
         <div class="social-links">
-          <a href="https://www.tiktok.com/@jhordi293733" target="_blank" class="social-btn tiktok">
+          <a href="https://www.tiktok.com/@jhordi3321" target="_blank" class="social-btn tiktok">
             <span class="icon">🎵</span>
             <span class="text">TikTok</span>
             <span class="username">@jhordi293733</span>
